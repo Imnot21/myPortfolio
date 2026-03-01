@@ -2,11 +2,15 @@
 .navbar {
     background: var(--background-color);
     padding: 10px 24px;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
 }
 
 img {
@@ -83,6 +87,7 @@ img {
     padding: 0;
     z-index: 1100;
     flex-shrink: 0;
+    margin-left: 20px;
 }
 
 .navbar-toggle .bar {
@@ -97,10 +102,12 @@ img {
 .navbar-toggle.active .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
 }
+
 .navbar-toggle.active .bar:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
 }
+
 .navbar-toggle.active .bar:nth-child(3) {
     transform: translateY(-8.5px) rotate(-45deg);
 }
@@ -125,7 +132,8 @@ img {
 @media (max-width: 768px) {
 
     .navbar-toggle {
-        display: flex; /* show hamburger */
+        display: flex;
+        /* show hamburger */
     }
 
     .navbar-menu {

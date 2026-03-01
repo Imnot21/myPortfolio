@@ -1,14 +1,82 @@
+import "./Skills.css";
+
+// Skill data — swap these out with your real stack
+const skills = [
+    { category: "Frontend",  items: ["React", "HTML", "CSS", "JavaScript"] },
+    { category: "Styling",   items: ["Tailwind CSS", "Bootstrap", "Sass"] },
+    { category: "Tools",     items: ["Git", "GitHub", "VS Code", "Figma"] },
+    { category: "Learning",  items: ["Node.js", "TypeScript", "Next.js"] },
+];
 
 function Skills() {
     return (
-        <div className="skills">
-            <h1>Our Skills</h1>
+        <section className="skills" id="skills">
 
-            <p>Welcome to our website! We are dedicated to providing you with the best experience possible. Our team is passionate about delivering high-quality content and services to our users.</p>
+            {/* Left: Text Content */}
+            <div className="skills-content">
 
-            <p>Our mission is to create a platform that connects people and fosters a sense of community. We believe in the power of collaboration and strive to bring people together through our website.</p>
-            <p>Thank you for visiting our website. We hope you find what you're looking for and enjoy your time here!</p>
-        </div>
+                <p className="skills-greeting">What I Work With</p>
+
+                <h1 className="skills-title">
+                    My <span className="skills-title-highlight">Skills</span>
+                </h1>
+
+                <p className="skills-description">
+                    I'm a frontend-focused developer who loves building clean,
+                    responsive interfaces. Here's the tech I use day to day —
+                    always learning and adding more.
+                </p>
+
+                {/* Skill Categories */}
+                <div className="skills-grid">
+                    {skills.map((group) => (
+                        <div className="skills-card" key={group.category}>
+                            <p className="skills-card-title">{group.category}</p>
+                            <div className="skills-tags">
+                                {group.items.map((item) => (
+                                    <span className="skills-tag" key={item}>{item}</span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+            {/* Right: Visual stat blocks */}
+            <div className="skills-visual">
+
+                <div className="skills-stat-wrapper">
+
+                    <div className="skills-stat">
+                        <span className="skills-stat-number">10+</span>
+                        <span className="skills-stat-label">Technologies</span>
+                    </div>
+
+                    <div className="skills-stat">
+                        <span className="skills-stat-number">5+</span>
+                        <span className="skills-stat-label">Projects Built</span>
+                    </div>
+
+                    <div className="skills-stat">
+                        <span className="skills-stat-number">1+</span>
+                        <span className="skills-stat-label">Years Learning</span>
+                    </div>
+
+                    <div className="skills-stat">
+                        <span className="skills-stat-number">∞</span>
+                        <span className="skills-stat-label">Still Curious</span>
+                    </div>
+
+                    {/* Floating badges — same as hero */}
+                    <div className="skills-badge skills-badge--top">Frontend 💻</div>
+                    <div className="skills-badge skills-badge--bottom">Always Learning 📚</div>
+
+                </div>
+
+            </div>
+
+        </section>
     );
 }
 

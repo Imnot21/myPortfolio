@@ -17,21 +17,12 @@ function Navbar() {
           <img src={logo} alt="Company logo" />
         </a>
 
-        {/* Navbar menu */}
-        <div className={`navbar-menu d-flex gap-3 ${isOpen ? "active" : ""}`}>
-          <a href="/home" className="navbar-item">
-            ABOUT
-          </a>
-          <a href="/about" className="navbar-item">
-            SKILLS
-          </a>
-          <a href="/services" className="navbar-item">
-            PROJECTS
-          </a>
-          <a href="/contact" className="navbar-item">
-            CONTACT
-          </a>
-        </div>
+       <div className={`navbar-menu d-flex gap-3 ${isOpen ? "active" : ""}`}>
+    <a href="#home"    className="navbar-item" onClick={() => setIsOpen(false)}>ABOUT</a>
+    <a href="#skills"   className="navbar-item" onClick={() => setIsOpen(false)}>SKILLS</a>
+    <a href="#projects" className="navbar-item" onClick={() => setIsOpen(false)}>PROJECTS</a>
+    <a href="#contact"  className="navbar-item" onClick={() => setIsOpen(false)}>CONTACT</a>
+</div>
 
         {/* Hamburger */}
         <div className="navbar-toggle" onClick={toggleMenu}>
