@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
 import avatar from "../images/profile.jpg";
+import resume from "../resume/AdamResume.pdf";
 function Hero() {
     // Typing animation for the role titles
     const roles = ["Frontend Developer", "UI/UX Enthusiast", "React Developer"];
@@ -58,7 +59,7 @@ function Hero() {
                 {/* CTA Buttons */}
                 <div className="hero-buttons">
                     <a href="#projects" className="btn btn-primary">View My Work</a>
-                    <a href="#" className="btn btn-outline" download>Download Resume</a>
+                    <a href={resume} className="btn btn-outline" download>Download Resume</a>
                 </div>
 
                 {/* Social Links */}
