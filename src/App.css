@@ -1,0 +1,43 @@
+:root {
+    /* Valorant-inspired color palette */
+    --primary-color: #FF4655;    /* Valorant red / orange */
+    --secondary-color: #00FF99;  /* Light green */
+    --accent-color: #FFFFFF;     /* White */
+    --background-color: #0A0A0A; /* Dark background */
+    --text-color: #E0E0E0; /* Light gray for text */
+    --orange-highlights: #FFA500; /* Orange highlights */
+    --navbackground: #292929; 
+    /* Fonts */
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #FF4655, #00FF99);
+    --gradient-secondary: linear-gradient(135deg, #FF4655, #FFA500);
+    --gradient-background: linear-gradient(135deg, #0A0A0A, #1A1A1A);
+
+    --gradient-main:linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+
+    --background-light: rgb(236, 232, 225);
+
+
+    /* Spacing (optional reusable units) */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+
+    /* Border radius */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 20px;
+
+    /* Shadows */
+    --shadow-light: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-glow: 0 8px 20px rgba(255, 0, 76, 0.4); /* stronger green glow effect */
+    --shadow-solid:  0 2px 0 2px #FF4655; /* green glow effect */
+}
+body{
+ background:var(--background-light);
+}
